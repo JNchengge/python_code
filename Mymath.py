@@ -1,0 +1,11 @@
+def add(x,y):
+    return x+y
+def minus(x,y):
+    return x-y
+def multiply(x,y):
+    return x*y
+def divide(x,y):
+    assert y!=0,'除数不能为0'
+    return x/y
+def my_power(x,y):
+    return x**y
