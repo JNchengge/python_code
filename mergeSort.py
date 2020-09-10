@@ -1,3 +1,4 @@
+import argparse
 def merge(a,b):
     c=[]
     m,n=0,0
@@ -21,6 +22,10 @@ def mergeSort(a):
     return merge(left,right)
 
 if __name__=='__main__':
-    a=[156,6556,5,14564,156,819,8513,9]
-    a1=mergeSort(a)
-    print(a1)
+    parser=argparse.ArgumentParser()
+    parser.add_argument('--list',type=str)
+    args=parser.parse_args()
+    a=[]
+    for num in args.list.split(','):
+        a.append(int(num))
+    print(mergeSort(a))

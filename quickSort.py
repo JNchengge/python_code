@@ -1,3 +1,4 @@
+import argparse
 def quickSort(a,low,high):
     i=low
     j=high
@@ -15,13 +16,11 @@ def quickSort(a,low,high):
     quickSort(a,low,i-1)
     quickSort(a,j+1,high)
 
-if __name__=='__main__':
-    a=[156,516,5,51,7651,378,413548,1566,573]
-    quickSort(a,0,8)
-    print(a)
-    b=[156,516,5,51,7651,378,413548,1566,573]
-    b.sort()
-    print(b)
-    c=[156,516,5,51,7651,378,413548,1566,573]
-    c.sort(reverse=True)
-    print(c)
+parser=argparse.ArgumentParser()
+parser.add_argument('--list',type=str)
+args=parser.parse_args()
+a=[]
+for num in args.list.split(','):
+    a.append(int(num))
+quickSort(a,0,len(a)-1)
+print(a)

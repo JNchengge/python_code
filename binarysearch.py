@@ -1,3 +1,4 @@
+import argparse
 def _binarysearch(key,alist,low,high):
     if high<=low:
         return -1
@@ -25,3 +26,17 @@ def binarysearch_not_recursion(key,alist):
             return mid
     return -1
 
+if __name__=='__main__':
+    parser=argparse.ArgumentParser()
+    parser.add_argument('--list',type=str)
+    parser.add_argument('--key')
+    args=parser.parse_args()
+    a=args.list.split(',')
+    b=[]
+    key=int(args.key)
+    for num in a:
+        b.append(int(num))
+    if binarysearch_not_recursion(key,b)>=0:
+        print("found")
+    else:
+        print("not found")
