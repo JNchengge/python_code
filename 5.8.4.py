@@ -7,3 +7,4 @@ for num in s:
     sumary+=num
 average=sumary/len(s)
 print("最大值：%d，最小值：%d，元素和：%d，平均值：%.2f"%(max_num,min_num,sumary,average))
+print(max(s),min(s),sum(s),sum(s)/len(s))
