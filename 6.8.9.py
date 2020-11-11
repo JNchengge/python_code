@@ -1,0 +1,7 @@
+import sys
+filename=sys.argv[0]
+line_no=0
+with open(filename,'r') as f:
+    for line in f:
+        line_no+=1
+        print(line_no,':',line)

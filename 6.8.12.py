@@ -11,4 +11,5 @@ while i<=n:
     a=i*2
     power=power*2
 sys.stdout=sys.__stdout__
+print('Done!')
 f.close()
